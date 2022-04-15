@@ -1,0 +1,21 @@
+# Calculate the annual salary of a help desk specialist(HDS).
+# The HDS at this company are only eligible for overtime(OT) if they make $15 or below.
+# Please only input numbers as integers and not as written numbers.
+
+hourly_rate = eval(input("What is your hourly pay rate?\n"))
+weekly_hours = eval(input("How many hours do you work in a normal work week?\n"))
+
+# Equation to simplify calculating the weekly pay of an HDS.
+weekly_pay = (hourly_rate * weekly_hours)
+
+# The information below is required in case the HDS does make $15 or below, to calculate their OT weekly pay.
+# The OT rate is variable, as it is based on the HDS rate of pay. The HDS that do qualify for OT, earn time and a half.
+# If the HDS is not eligible, they should respond with "0" to the following questions.
+overtime_rate = eval(input("What is the overtime hourly pay rate for your position(Respond with 0 if not eligible)?\n"))
+overtime = eval(input("How many overtime hours on average do you work per week(Respond with 0 if not eligible)?\n"))
+
+# There are 52 weeks in a year, so the weekly pay will be multiplied by 52 to calculate the annual salary.
+if hourly_rate <= 15:
+    print("My salary including overtime is", (weekly_pay + (overtime_rate * overtime)) * 52, ".")
+else:
+    print("My normal salary is ", (hourly_rate * weekly_hours) * 52, ".")
