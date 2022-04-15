@@ -1,0 +1,22 @@
+# This program is to assist a crochet boutique owner with calculating a client's fees for her customized crochet projects.
+print("Welcome to Maria's Crochet Shoppe!")
+print('I can create any type of crochet project and am currently working on one right now for a new client.')
+print('I need help calculating how much I should charge based on hours and supplies.\n')
+
+# Helping Maria compute her fees for a new project.
+crochet_days = eval(input("\tHow many days did Maria spend crocheting this project this week?"))
+supplies = eval(input("\tHow many bundles of yarn did Maria use for this project?"))
+supplies_cost = supplies * 6
+
+total_project_cost = 0
+total_hours = 0
+
+# While loop to find total crochet project cost.
+print('\nPlease list the hours you worked for the week starting with the first day and ending with the last.')
+while crochet_days > 0:
+    print("How many hours did you work?")
+    crochet_hours = eval(input())
+    crochet_days = crochet_days - 1
+    total_hours = total_hours + crochet_hours
+    total_hour_fee = total_hours * 20
+    total_project_cost = total_hour_fee + supplies_cost
