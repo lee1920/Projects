@@ -1,0 +1,77 @@
+print("\t Bienvenue a la French Maid Service!")
+print("\tMy name is Chere, and I am the owner.\nPlease respond to the following questions for a service quote.")
+# This cleaning service requires a minimum of two rooms.
+# Input responses are case-sensitive.
+# Input responses that are numbers must be entered as integers, not written numbers.
+
+# My week 3 assignment submission already asked if they would like a light or deep cleaning, so I added in the option for a complete home cleaning, which would include the outside as well(power-washing the outside).
+# Light cleaning: Dusting, sweeping, making the beds, cleaning the bathrooms.
+# Deep cleaning: All that light cleaning includes, plus disinfecting and mopping the floors, disinfecting all home surfaces, polishing the silverware, polishing wooden fixtures, cleaning windows.
+# Complete-home cleaning: All that deep cleaning includes, plus power-washing the outside of the home(this would include the fence and deck, if applicable).
+
+# Questions for potential clients:
+rooms = eval(input("\nHow many rooms are there that need to be cleaned?\n"))
+type_of_service = (input("Would you like a Light Cleaning, Deep Cleaning, or Complete"
+                         "-Home Cleaning?\n"))
+
+
+# Responses for 2 rooms(Small)
+
+# Function definition for small amount of rooms.
+def small(a, b):
+
+    if a == 2 and b == "Light Cleaning":
+        print("The price is $160.")
+    elif a == 2 and b == "Deep Cleaning":
+        print("The price is $310.")
+    elif a == 2 and b == "Complete-Home Cleaning":
+        print("The price is $450.")
+
+# Function call for small amount of rooms.
+
+
+small(rooms, type_of_service)
+
+
+# Responses for 3-4 rooms(Medium)
+
+# Function definition for medium amount of rooms.
+def medium(c, d):
+
+    if c == 3 and d == "Light Cleaning":
+        print("The price is $300.")
+    elif c == 3 and d == "Deep Cleaning":
+        print("The price is $600.")
+    elif c == 3 and d == "Complete-Home Cleaning":
+        print("The price is $740.")
+    elif c == 4 and d == "Light Cleaning":
+        print("The price is $300.")
+    elif c == 4 and d == "Deep Cleaning":
+        print("The price is $600.")
+    elif c == 4 and d == "Complete-Home Cleaning":
+        print("The price is $740.")
+
+# Function call for medium amount of rooms.
+
+
+medium(rooms, type_of_service)
+
+
+# Responses for 5 or more rooms(Large)
+
+# Function definition for large amount of rooms.
+def large(e, f):
+
+    if e >= 5 and f == "Light Cleaning":
+        print("The price is $400.")
+    elif e >= 5 and f == "Deep Cleaning":
+        print("The price is $800.")
+    elif e >= 5 and f == "Complete-Home Cleaning":
+        print("The price is $940.")
+
+# Function call for large amount of rooms.
+
+
+large(rooms, type_of_service)
+
+print("\nI hope you choose to go with our services, as we do a very thorough job and guarantee client-satisfaction!")
