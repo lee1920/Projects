@@ -1,0 +1,18 @@
+# Introduction statement
+print("***Welcome to Zoe's Swim Emporium***")
+print("As we start the new swim season, we'd like to get the ratio for the amount of teachers to students.")
+print("This will be our greatest season yet!")
+
+instructors = eval(input("How many swim instructors do we have?\n"))
+students = eval(input("How many students have signed up?\n"))
+
+# Creating function to calculate instructor to student ratio
+
+
+def swim(b, c):
+    class_ratio = b // c
+    print("Based off of our class ratio for the 2022 summer season, we will have approximately", class_ratio, "classes!")
+
+
+# Calling the function
+swim(students, instructors)
