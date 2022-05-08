@@ -1,0 +1,224 @@
+print("\t Bienvenue a la French Maid House Cleaning & Landscaping Services!")
+print("\tMy name is Chere, and I am the owner.\nPlease respond to the following questions for a service quote.")
+# Input responses that are numbers must be entered as integers, not written numbers.
+
+# Light cleaning: Dusting, sweeping, making the beds, cleaning the bathrooms.
+# Deep cleaning: All that light cleaning includes, plus disinfecting and mopping the floors, disinfecting all home surfaces, polishing the silverware, polishing wooden fixtures, cleaning windows.
+# Complete-home cleaning: All that deep cleaning includes, plus power-washing the outside of the home(this would include the fence and deck, if applicable).
+
+# Yard service includes lawn mowing, edging, and shrub pruning.
+
+# Question for potential clients:
+cleaning_or_yard = input('Are you interested in house cleaning or yard service?').lower().strip()
+# Re-prompt user if the input is invalid:
+while cleaning_or_yard not in ('house cleaning', 'yard service'):
+    cleaning_or_yard = input('Are you interested in house cleaning or yard service?').lower().strip()
+# Senior discount question. If eligible the customer will receive a $10 off discount from their service.
+senior_discount = input("Are you above the age of 65?").lower().strip()
+while senior_discount not in ('yes', 'no'):
+    senior_discount = input("Are you above the age of 65?").lower().strip()
+
+
+# If the customer selects house cleaning, the following functions will be called.
+# Function definition for small amount of rooms.
+def small(a, b):
+
+    if a == 2 and b == "Light Cleaning":
+        print("The price is $160.")
+    elif a == 2 and b == "Deep Cleaning":
+        print("The price is $310.")
+    elif a == 2 and b == "Complete-Home Cleaning":
+        print("The price is $450.")
+
+
+# Function definition for medium amount of rooms.
+def medium(c, d):
+
+    if c == 3 and d == "Light Cleaning":
+        print("The price is $300.")
+    elif c == 3 and d == "Deep Cleaning":
+        print("The price is $600.")
+    elif c == 3 and d == "Complete-Home Cleaning":
+        print("The price is $740.")
+    elif c == 4 and d == "Light Cleaning":
+        print("The price is $300.")
+    elif c == 4 and d == "Deep Cleaning":
+        print("The price is $600.")
+    elif c == 4 and d == "Complete-Home Cleaning":
+        print("The price is $740.")
+
+
+# Function definition for large amount of rooms.
+def large(e, f):
+
+    if e >= 5 and f == "Light Cleaning":
+        print("The price is $400.")
+    elif e >= 5 and f == "Deep Cleaning":
+        print("The price is $800.")
+    elif e >= 5 and f == "Complete-Home Cleaning":
+        print("The price is $940.")
+
+
+# Function definition for small amount of rooms(2) and senior discount.
+def small_senior(g, h):
+
+    if g == 2 and h == "Light Cleaning":
+        print("The price is $150. This is including your $10 senior discount.")
+    elif g == 2 and h == "Deep Cleaning":
+        print("The price is $300. This is including your $10 senior discount.")
+    elif g == 2 and h == "Complete-Home Cleaning":
+        print("The price is $440. This is including your $10 senior discount.")
+
+
+# Function definition for medium amount of rooms(3-4) and senior discount.
+def medium_senior(i, j):
+
+    if i == 3 and j == "Light Cleaning":
+        print("The price is $290. This is including your $10 senior discount.")
+    elif i == 3 and j == "Deep Cleaning":
+        print("The price is $590. This is including your $10 senior discount.")
+    elif i == 3 and j == "Complete-Home Cleaning":
+        print("The price is $730. This is including your $10 senior discount.")
+    elif i == 4 and j == "Light Cleaning":
+        print("The price is $290. This is including your $10 senior discount.")
+    elif i == 4 and j == "Deep Cleaning":
+        print("The price is $590. This is including your $10 senior discount.")
+    elif i == 4 and j == "Complete-Home Cleaning":
+        print("The price is $730. This is including your $10 senior discount.")
+
+
+# Function definition for large amount of rooms(5 or more) and senior discount.
+def large_senior(k, x):
+
+    if k >= 5 and x == "Light Cleaning":
+        print("The price is $390. This is including your $10 senior discount.")
+    elif k >= 5 and x == "Deep Cleaning":
+        print("The price is $790. This is including your $10 senior discount.")
+    elif k >= 5 and x == "Complete-Home Cleaning":
+        print("The price is $930. This is including your $10 senior discount.")
+
+
+# If the customer selects yard services, the following functions will be called.
+# Function definition for computing cost of mowing service.
+def yard_mowing(y, m):
+    if y == 'mowing' and 1 <= m <= 8:
+        print('The price is $240.')
+    elif y == 'mowing' and 9 <= m <= 18:
+        print('The price is $480.')
+    elif y == 'mowing' and 19 <= m <= 28:
+        print('The price is $720.')
+    elif y == 'mowing' and m > 29:
+        print('We will need an in-person consult to determine the estimate.')
+
+
+# Function definition for computing cost of edging service.
+def yard_edging(n, o):
+    if n == 'edging' and 2 <= o <= 10:
+        print('The price is $100.')
+    elif n == 'edging' and 11 <= o <= 20:
+        print('The price is $200.')
+    elif n == 'edging' and 21 <= o <= 30:
+        print('The price is $300.')
+    elif n == 'edging' and o > 31:
+        print('We will need an in-person consult to determine the estimate.')
+
+
+# Function definition for computing cost of shrub pruning service.
+def shrub_pruning(p, q):
+    if p == 'shrub pruning' and 1 <= q <= 3:
+        print("The price is $200.")
+    elif p == 'shrub pruning' and 4 <= q <= 6:
+        print("The price is $400.")
+    elif p == 'shrub pruning' and 7 <= q <= 10:
+        print("The price is $600.")
+    elif p == 'shrub pruning' and q > 10:
+        print('We will need an in-person consult to determine the estimate.')
+
+
+# Function definition for computing cost of mowing service and senior discount.
+def yard_mowing_senior(r, s):
+    if r == 'mowing' and 1 <= s <= 8:
+        print('The price is $230. This is including your $10 senior discount.')
+    elif r == 'mowing' and 9 <= s <= 18:
+        print('The price is $470. This is including your $10 senior discount.')
+    elif r == 'mowing' and 19 <= s <= 28:
+        print('The price is $710. This is including your $10 senior discount.')
+    elif r == 'mowing' and s > 29:
+        print('We will need an in-person consult to determine the estimate. You will receive a $10 senior discount.')
+
+
+# Function definition for computing cost of edging service and senior discount.
+def yard_edging_senior(t, u):
+    if t == 'edging' and 2 <= u <= 10:
+        print('The price is $90. This is including your $10 senior discount.')
+    elif t == 'edging' and 11 <= u <= 20:
+        print('The price is $190. This is including your $10 senior discount.')
+    elif t == 'edging' and 21 <= u <= 30:
+        print('The price is $290. This is including your $10 senior discount.')
+    elif t == 'edging' and u > 31:
+        print('We will need an in-person consult to determine the estimate. You will receive a $10 senior discount.')
+
+
+# Function definition for computing cost of shrub pruning service and senior discount.
+def shrub_pruning_senior(v, w):
+    if v == 'shrub pruning' and 1 <= w <= 3:
+        print("The price is $190. This is including your $10 senior discount.")
+    elif v == 'shrub pruning' and 4 <= w <= 6:
+        print("The price is $390. This is including your $10 senior discount.")
+    elif v == 'shrub pruning' and 7 <= w <= 10:
+        print("The price is $590. This is including your $10 senior discount.")
+    elif v == 'shrub pruning' and w > 10:
+        print('We will need an in-person consult to determine the estimate. You will receive a $10 senior discount.')
+
+
+# if/elif statement to compute the cost of house cleaning or yard services, depending on customers choice.
+# Also, computes cost including senior discount if applicable.
+if cleaning_or_yard == 'house cleaning':
+    rooms = eval(input("\nHow many rooms are there that need to be cleaned? A minimum of two rooms is required.\n"))
+    type_of_cleaning = (input("Would you like a Light Cleaning, Deep Cleaning, or Complete-Home Cleaning?\n")).title().strip()
+    while type_of_cleaning not in ('Light Cleaning', 'Deep Cleaning', 'Complete-Home Cleaning'):
+        type_of_cleaning = (input("Would you like a Light Cleaning, Deep Cleaning, or Complete-Home Cleaning?\n")).title().strip()
+    # Function call for small amount of rooms(2 rooms).
+    if senior_discount == "yes":
+        small_senior(rooms, type_of_cleaning)
+    elif senior_discount == "no":
+        small(rooms, type_of_cleaning)
+    # Function call for 3-4 rooms(Medium)
+    if senior_discount == "yes":
+        medium_senior(rooms, type_of_cleaning)
+    elif senior_discount == "no":
+        medium(rooms, type_of_cleaning)
+    # Function call for 5 or more rooms(Large)
+    if senior_discount == "yes":
+        large_senior(rooms, type_of_cleaning)
+    elif senior_discount == "no":
+        large(rooms, type_of_cleaning)
+
+elif cleaning_or_yard == 'yard service':
+    type_of_yard = input('Would you like mowing, edging or shrub pruning?').lower().strip()
+    while type_of_yard not in ('mowing', 'edging', 'shrub pruning'):
+        type_of_yard = input('Would you like mowing, edging or shrub pruning?').lower().strip()
+
+    if type_of_yard == 'mowing':
+        yard_sq_ft = eval(input('What is your total yard square footage?'))
+        if type_of_yard == "mowing" and senior_discount == "yes":
+            yard_mowing_senior(type_of_yard, yard_sq_ft)
+        elif type_of_yard == "mowing" and senior_discount == "no":
+            yard_mowing(type_of_yard, yard_sq_ft)
+
+    elif type_of_yard == 'edging':
+        yard_edge_lf = eval(input("What is the total linear footage of your yards' edges?"))
+        if type_of_yard == "edging" and senior_discount == "yes":
+            yard_edging_senior(type_of_yard, yard_edge_lf)
+        elif type_of_yard == "edging" and senior_discount == "not":
+            yard_edging(type_of_yard, yard_edge_lf)
+
+    elif type_of_yard == "shrub pruning":
+        amount_of_shrubs = eval(input('How many total shrubs are in your yard?'))
+        if type_of_yard == "shrub pruning" and senior_discount == "yes":
+            shrub_pruning_senior(type_of_yard, amount_of_shrubs)
+        if type_of_yard == "shrub pruning" and senior_discount == "no":
+            shrub_pruning(type_of_yard, amount_of_shrubs)
+
+
+print("\nI hope you choose to go with our services, as we do a very thorough job and guarantee client-satisfaction!")
